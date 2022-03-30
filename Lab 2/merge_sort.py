@@ -8,10 +8,7 @@ def mergeSort(arr):
         mergeSort(right)
 
         # i for left half and j for right half
-        i = 0
-        j = 0
-
-        k = 0
+        i, j, k = 0
 
         # Loop until either of the half has been sorted into position
         while i < len(left) and j < len(right):
@@ -33,8 +30,8 @@ def mergeSort(arr):
             arr[k] = right[j]
             j += 1
             k += 1
+    return arr
 
 
-arr = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-mergeSort(arr)
-print(arr)
+arr = random.sample(range(1, 1000000), 100)
+# print(mergeSort(arr))

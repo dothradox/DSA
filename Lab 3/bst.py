@@ -70,3 +70,27 @@ class BinarySearchTree:
         while x.right is not None:
             x = x.right
         return x.key, x.value
+
+    def remove(self):
+        pass
+
+    def in_order(self, root):
+        if root is None:
+            return ()
+        return in_order(root.left)
+        arr.append(root.key)
+        return in_order(root.right)
+
+    def post_order(self, root):
+        if root is None:
+            return ()
+        return post_order(root.right)
+        return post_order(root.left)
+        arr.append(root.key)
+
+    def pre_order(self, root):
+        if root is None:
+            return ()
+        arr.append(root.key)
+        return pre_order(root.left)
+        return pre_order(root.right)

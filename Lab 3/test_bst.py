@@ -42,19 +42,19 @@ class BSTTestCase(unittest.TestCase):
         self.assertEqual(bsTree.search(bsTree.root, 10), "Value for 10")
         self.assertEqual(bsTree.search(bsTree.root, 15), "Value for 15")
 
-    # def test_inorder(self):
-    #     """
-    #     tests for inorder_walk
-    #     """
-    #     actual_output = self.bst.inorder_walk()
-    #     expected_output = [1, 5, 8, 10, 30, 40, 45, 52]
+    def test_inorder(self):
+        """
+        tests for inorder_walk
+        """
+        actual_output = self.bst.inorder_walk()
+        expected_output = [1, 5, 8, 10, 30, 40, 45, 52]
 
-    #     self.assertListEqual(actual_output, expected_output)
+        self.assertListEqual(actual_output, expected_output)
 
-    #     # Add one node
-    #     self.bst.add(25, "Value for 25")
-    #     # Inorder traversal must return a different sequence
-    #     self.assertListEqual(self.bst.inorder_walk(), [1, 5, 8, 10, 25, 30, 40, 45, 52])
+        # Add one node
+        self.bst.add(25, "Value for 25")
+        # Inorder traversal must return a different sequence
+        self.assertListEqual(self.bst.inorder_walk(), [1, 5, 8, 10, 25, 30, 40, 45, 52])
 
     # def test_postorder(self):
     #     """
